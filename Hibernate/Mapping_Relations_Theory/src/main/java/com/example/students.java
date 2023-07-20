@@ -24,36 +24,35 @@ public class students {
     @ManyToMany(mappedBy = "student") // mapped(1)
     private List<Laptops> laptops = new ArrayList<>();
 
-    
     public int getId() {
         return this.id;
     }
-    
+
     public void setId(int id) {
         this.id = id;
     }
-    
+
     public String getName() {
         return this.name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public float getMarks() {
         return this.marks;
     }
-    
+
     public void setMarks(float marks) {
         this.marks = marks;
     }
-    
+
     public List<Laptops> getLaptops() {
-    return this.laptops;
+        return this.laptops;
     }
 
     public void setLaptops(List<Laptops> laptops) {
-    this.laptops = laptops;
+        this.laptops = laptops;
     }
 }
