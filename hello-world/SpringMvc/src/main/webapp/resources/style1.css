@@ -1,0 +1,26 @@
+form{
+    border: solid blue 10px;
+    background-color: lightgoldenrodyellow;
+}
+
+label{
+	float: left;
+	width: 120px;
+}
+
+input{
+	width: 120px;
+}
+h1{
+	color:blue;
+}
+
+.result{
+	border:solid;
+	background-color: blanchedalmond;
+	padding: 20px;
+	width: 30%;
+	height: 160px;
+	margin-left: 200px;
+	margin-top:30px;
+}

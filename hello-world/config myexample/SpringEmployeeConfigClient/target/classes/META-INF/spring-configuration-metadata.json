@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "employee-service",
+      "type": "com.coforge.model.Employee",
+      "sourceType": "com.coforge.model.Employee"
+    }
+  ],
+  "properties": [
+    {
+      "name": "employee-service.id",
+      "type": "java.lang.Integer",
+      "sourceType": "com.coforge.model.Employee"
+    },
+    {
+      "name": "employee-service.name",
+      "type": "java.lang.String",
+      "sourceType": "com.coforge.model.Employee"
+    },
+    {
+      "name": "employee-service.salary",
+      "type": "java.lang.Float",
+      "sourceType": "com.coforge.model.Employee"
+    }
+  ],
+  "hints": []
+}
