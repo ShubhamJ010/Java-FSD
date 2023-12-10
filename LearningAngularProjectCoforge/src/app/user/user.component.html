@@ -1,0 +1,45 @@
+<h1>User Page</h1>
+<h2  [ngStyle]="{'margin-left': '440px','background-color':'maroon', 'color':'white' , 'width':'20%'}">Use using ngIf</h2>
+
+<table class="table table-srtiped table-darked table-warning">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Dob</th>
+            <th>Hobbies</th>
+            <th>Aukadh</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of user">
+
+            <td>{{u.userid}}</td>
+            <td>{{u.username|uppercase}}</td>
+            <td>{{u.usersalary|currency:'Rs'}}</td>
+            <td>{{u.userdob}}</td>
+            <td>{{u.userhobby}}</td>
+            <td>
+                <span [ngSwitch]="u.usersalary">
+
+                    <span *ngSwitchCase="70000">
+                        Iteractive Salary
+                    </span>
+                    <span *ngSwitchCase="80000">
+                        Iteractive Salary
+                    </span>
+                    <span *ngSwitchCase="67000">
+                        Iteractive Salary
+                    </span>
+                    <span *ngSwitchDefault=>
+                        Low Salary
+                    </span>
+
+                </span>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

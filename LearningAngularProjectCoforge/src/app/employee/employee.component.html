@@ -1,0 +1,105 @@
+<style>
+  /* Center the form vertically and horizontally */
+  body,
+  html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container {
+    max-width: 400px;
+  }
+
+  .info-transition {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+  }
+
+  .info-hidden {
+    opacity: 0;
+  }
+</style>
+<div class="container mt-4">
+  <form
+    #empForm="ngForm"
+    (ngSubmit)="getData()"
+    class="shadow p-4 rounded bg-light"
+  >
+    <h2 class="mb-4">Employee Form</h2>
+    <div class="form-group">
+      <label for="employeeId">Employee ID:</label>
+      <input
+        type="text"
+        class="form-control"
+        name="id"
+        [(ngModel)]="emp1.id"
+        placeholder="Enter employee ID"
+        required
+        #id="ngModel"
+        minlength="3"
+      />
+      <div *ngIf="id.touched && id.errors" class="text-danger">
+        <div *ngIf="id.errors['required']">ID is empty</div>
+        <div *ngIf="id.errors['minlength']">
+          ID must be at least 3 characters long
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="employeeName">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Name"
+        [(ngModel)]="emp1.Name"
+        placeholder="Enter employee name"
+        required
+        #Name="ngModel"
+        minlength="10"
+      />
+      <div *ngIf="Name.touched && Name.errors" class="text-danger">
+        <div *ngIf="Name.errors['required']">Name is empty</div>
+        <div *ngIf="Name.errors['minlength']">
+          Name must be at least 10 characters long
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="employeeSalary">Salary:</label>
+      <input
+        type="number"
+        class="form-control"
+        name="Salary"
+        [(ngModel)]="emp1.Salary"
+        placeholder="Enter employee salary"
+        required
+        #Salary="ngModel"
+        minlength="5"
+      />
+      <div *ngIf="Salary.touched && Salary.errors" class="text-danger">
+        <div *ngIf="Salary.errors['required']">Salary is empty</div>
+        <div *ngIf="Salary.errors['minlength']">
+          Salary must be at least 5 characters long
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-secondary ml-2" (click)="resetForm()">
+      Cancel
+    </button>
+  </form>
+</div>
+<div
+  [hidden]="!submitted"
+  class="mt-4 info-transition"
+  [ngClass]="{ 'info-hidden': !submitted }"
+>
+  <div class="card bg-light p-4 rounded shadow">
+    <h2 class="mb-3">Employee Information</h2>
+    <div class="font-weight-bold">Id: {{ emp1.id }}</div>
+    <div class="font-weight-bold">Name: {{ emp1.Name }}</div>
+    <div class="font-weight-bold">Salary: {{ emp1.Salary }}</div>
+  </div>
+</div>

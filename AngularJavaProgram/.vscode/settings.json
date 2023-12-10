@@ -1,0 +1,24 @@
+{
+  "java.compile.nullAnalysis.mode": "automatic",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "ProductApp/.angular": true,
+    "**/.angular": true,
+    "ProductApp/*.*": true,
+    ".angular": true,
+    "ProductApp/node_modules": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    "ProductApp/src/assets": true,
+    "**/assets": true,
+    "ProductApp/src/*.*": true,
+    "assets": true
+  },
+  "explorerExclude.backup": {},
+  "git.ignoreLimitWarning": true
+}
